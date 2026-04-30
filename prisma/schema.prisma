@@ -1,0 +1,30 @@
+datasource db {
+  provider = "mysql"
+}
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+model User{
+  id        String       @unique @default(uuid())
+  name      String
+  createdAt DateTime     @default(now())
+  games     GamePlayer[]
+}
+
+model Game {
+  id        String       @unique @default(uuid())
+  players   GamePlayer[]
+  lastMove  DateTime?
+  createdAt DateTime     @default(now())
+}
+
+model GamePlayer {
+  id       String @unique @default(uuid())
+  player   Player @relation(fields: [playerId], references: [id])
+  playerId String
+  game     Game   @relation(fields: [gameId], references: [id])
+  gameId   String
+}
