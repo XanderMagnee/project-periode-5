@@ -7,24 +7,52 @@ generator client {
   output   = "../src/generated/prisma"
 }
 
-model User{
-  id        String       @unique @default(uuid())
-  name      String
-  createdAt DateTime     @default(now())
-  games     GamePlayer[]
+enum TransactionType {
+  INCOME
+  EXPENSE
 }
 
-model Game {
-  id        String       @unique @default(uuid())
-  players   GamePlayer[]
-  lastMove  DateTime?
-  createdAt DateTime     @default(now())
+enum Frequency {
+  ONCE
+  DAILY
+  WEEKLY
+  MONTHLY
+  YEARLY
 }
 
-model GamePlayer {
-  id       String @unique @default(uuid())
-  player   Player @relation(fields: [playerId], references: [id])
-  playerId String
-  game     Game   @relation(fields: [gameId], references: [id])
-  gameId   String
+model Person {
+  id           String        @id @default(uuid())
+  name         String
+  email        String        @unique
+  birthDate    DateTime?
+  address      String?
+  phone        String?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  transactions Transaction[]
+}
+
+model Category {
+  id           String          @id @default(uuid())
+  name         String
+  description  String?
+  type         TransactionType
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+  transactions Transaction[]
+}
+
+model Transaction {
+  id          String          @id @default(uuid())
+  person      Person          @relation(fields: [personId], references: [id], onDelete: Cascade)
+  personId    String
+  category    Category        @relation(fields: [categoryId], references: [id])
+  categoryId  String
+  amount      Float
+  description String?
+  date        DateTime        @default(now())
+  type        TransactionType
+  frequency   Frequency       @default(MONTHLY)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
 }
