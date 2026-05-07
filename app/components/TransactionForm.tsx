@@ -129,7 +129,7 @@ export default function TransactionForm({
           name="categoryId"
           required
           defaultValue={initialData?.categoryId}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
         >
           <option value="">-- Kies een categorie --</option>
           {filteredCategories.map((c) => (
@@ -159,7 +159,7 @@ export default function TransactionForm({
           step="0.01"
           required
           defaultValue={initialData?.amount}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
           placeholder="0.00"
         />
       </div>
@@ -172,7 +172,7 @@ export default function TransactionForm({
           name="date"
           type="date"
           defaultValue={dateValue}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
         />
       </div>
 
@@ -183,7 +183,7 @@ export default function TransactionForm({
         <select
           name="frequency"
           defaultValue={initialData?.frequency ?? 'MONTHLY'}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
         >
           {FREQUENCIES.map(({ value, label }) => (
             <option key={value} value={value}>
@@ -201,7 +201,7 @@ export default function TransactionForm({
           name="description"
           type="text"
           defaultValue={initialData?.description ?? ''}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
           placeholder="Optionele omschrijving"
         />
       </div>
@@ -210,7 +210,7 @@ export default function TransactionForm({
         <button
           type="submit"
           disabled={loading}
-          className="flex-1 bg-blue-700 text-white py-2 rounded-lg font-medium hover:bg-blue-800 disabled:opacity-50 transition-colors"
+          className="flex-1 bg-black text-white py-2 rounded-lg font-medium hover:bg-gray-800 disabled:opacity-50 transition-colors"
         >
           {loading ? 'Opslaan...' : initialData ? 'Wijzigingen opslaan' : 'Transactie toevoegen'}
         </button>

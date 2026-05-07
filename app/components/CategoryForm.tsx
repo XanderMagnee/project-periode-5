@@ -72,7 +72,7 @@ export default function CategoryForm({ initialData }: CategoryFormProps) {
           type="text"
           required
           defaultValue={initialData?.name}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
           placeholder="bijv. Salaris"
         />
       </div>
@@ -85,7 +85,7 @@ export default function CategoryForm({ initialData }: CategoryFormProps) {
           name="type"
           required
           defaultValue={initialData?.type ?? 'EXPENSE'}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
         >
           <option value="INCOME">💰 Inkomst</option>
           <option value="EXPENSE">💸 Uitgave</option>
@@ -100,7 +100,7 @@ export default function CategoryForm({ initialData }: CategoryFormProps) {
           name="description"
           type="text"
           defaultValue={initialData?.description ?? ''}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
           placeholder="Optionele omschrijving"
         />
       </div>
@@ -109,7 +109,7 @@ export default function CategoryForm({ initialData }: CategoryFormProps) {
         <button
           type="submit"
           disabled={loading}
-          className="flex-1 bg-blue-700 text-white py-2 rounded-lg font-medium hover:bg-blue-800 disabled:opacity-50 transition-colors"
+          className="flex-1 bg-black text-white py-2 rounded-lg font-medium hover:bg-gray-800 disabled:opacity-50 transition-colors"
         >
           {loading
             ? 'Opslaan...'

@@ -14,7 +14,7 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="bg-blue-700 text-white shadow-md">
+    <nav className="bg-black text-white shadow-md">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-bold text-xl">
           <span className="text-2xl">💰</span>
@@ -27,8 +27,8 @@ export default function Navbar() {
                 href={href}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   pathname === href || (href !== '/' && pathname.startsWith(href))
-                    ? 'bg-blue-900'
-                    : 'hover:bg-blue-600'
+                    ? 'bg-gray-700'
+                    : 'hover:bg-gray-800'
                 }`}
               >
                 {label}

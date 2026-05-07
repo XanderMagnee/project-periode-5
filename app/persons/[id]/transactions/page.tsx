@@ -49,7 +49,7 @@ export default async function TransactionsPage({
         <h1 className="text-3xl font-bold text-gray-800">Transacties</h1>
         <Link
           href={`/persons/${id}/transactions/new`}
-          className="bg-blue-700 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-800 transition-colors"
+          className="bg-black text-white px-5 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors"
         >
           + Nieuwe Transactie
         </Link>
@@ -65,9 +65,9 @@ export default async function TransactionsPage({
           <p className="text-xs text-red-700 font-medium uppercase mb-1">Uitgaven</p>
           <p className="text-2xl font-bold text-red-700">€{totalExpense.toFixed(2)}</p>
         </div>
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
-          <p className="text-xs text-blue-700 font-medium uppercase mb-1">Saldo</p>
-          <p className={`text-2xl font-bold ${totalIncome - totalExpense >= 0 ? 'text-blue-700' : 'text-orange-600'}`}>
+        <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+          <p className="text-xs text-gray-800 font-medium uppercase mb-1">Saldo</p>
+          <p className={`text-2xl font-bold ${totalIncome - totalExpense >= 0 ? 'text-gray-800' : 'text-orange-600'}`}>
             €{(totalIncome - totalExpense).toFixed(2)}
           </p>
         </div>
@@ -85,7 +85,7 @@ export default async function TransactionsPage({
             href={value ? `?type=${value}` : `?`}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               (type ?? '') === value
-                ? 'bg-blue-700 text-white'
+                ? 'bg-black text-white'
                 : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
             }`}
           >
@@ -102,7 +102,7 @@ export default async function TransactionsPage({
           <p className="text-sm mt-1 mb-4">Voeg een transactie toe om te beginnen</p>
           <Link
             href={`/persons/${id}/transactions/new`}
-            className="bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-800"
+            className="bg-black text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-gray-800"
           >
             Transactie toevoegen
           </Link>
@@ -150,7 +150,7 @@ export default async function TransactionsPage({
                     <div className="flex gap-1 justify-end">
                       <Link
                         href={`/persons/${id}/transactions/${t.id}/edit`}
-                        className="text-blue-600 hover:underline text-xs"
+                        className="text-black hover:underline text-xs"
                       >
                         Bewerken
                       </Link>

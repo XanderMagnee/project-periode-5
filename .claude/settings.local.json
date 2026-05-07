@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npx prisma *)",
       "Bash(npx tsc *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\xande\\\\Documents\\\\GitHub\\\\project-periode-5\" -Name \"tailwind*\" -ErrorAction SilentlyContinue)"
     ]
   }
 }

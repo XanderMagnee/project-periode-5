@@ -99,14 +99,14 @@ export default async function ReportPage({
         <div
           className={`border rounded-xl p-4 ${
             balance >= 0
-              ? 'bg-blue-50 border-blue-200'
+              ? 'bg-gray-50 border-gray-200'
               : 'bg-orange-50 border-orange-200'
           }`}
         >
           <p className="text-xs font-medium uppercase mb-1 text-gray-600">Saldo</p>
           <p
             className={`text-2xl font-bold ${
-              balance >= 0 ? 'text-blue-700' : 'text-orange-600'
+              balance >= 0 ? 'text-gray-800' : 'text-orange-600'
             }`}
           >
             €{balance.toFixed(2)}
@@ -125,7 +125,7 @@ export default async function ReportPage({
             ? 'bg-green-50 border-green-200'
             : balance < 0
             ? 'bg-orange-50 border-orange-200'
-            : 'bg-blue-50 border-blue-200'
+            : 'bg-gray-50 border-gray-200'
         }`}
       >
         <h2 className="font-semibold text-gray-800 mb-2">
@@ -144,7 +144,7 @@ export default async function ReportPage({
           <p className="text-sm mt-1 mb-4">Voeg transacties toe om grafieken te zien</p>
           <Link
             href={`/persons/${id}/transactions/new`}
-            className="bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-800"
+            className="bg-black text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-gray-800"
           >
             Transactie toevoegen
           </Link>

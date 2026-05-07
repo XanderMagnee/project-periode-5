@@ -13,7 +13,7 @@ export default async function HomePage() {
     <div>
       {/* Hero */}
       <section className="text-center py-12 mb-8">
-        <h1 className="text-4xl font-bold text-blue-700 mb-3">
+        <h1 className="text-4xl font-bold text-black mb-3">
           💰 Budget Buddy
         </h1>
         <p className="text-lg text-gray-600 max-w-xl mx-auto">
@@ -23,13 +23,13 @@ export default async function HomePage() {
         <div className="mt-6 flex gap-4 justify-center">
           <Link
             href="/persons/new"
-            className="bg-blue-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition-colors"
+            className="bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors"
           >
             Nieuw Persoon
           </Link>
           <Link
             href="/categories"
-            className="bg-white border border-blue-700 text-blue-700 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+            className="bg-white border border-black text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
           >
             Categorieën
           </Link>
@@ -42,7 +42,7 @@ export default async function HomePage() {
           <h2 className="text-2xl font-semibold text-gray-800">Personen</h2>
           <Link
             href="/persons"
-            className="text-blue-600 text-sm hover:underline"
+            className="text-black text-sm hover:underline"
           >
             Alle personen →
           </Link>
@@ -55,7 +55,7 @@ export default async function HomePage() {
             <p className="text-sm mb-4">Voeg een persoon toe om te beginnen</p>
             <Link
               href="/persons/new"
-              className="bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-800 transition-colors"
+              className="bg-black text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
             >
               Eerste persoon aanmaken
             </Link>
@@ -66,10 +66,10 @@ export default async function HomePage() {
               <Link
                 key={person.id}
                 href={`/persons/${person.id}`}
-                className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-blue-300 transition-all"
+                className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md hover:border-gray-400 transition-all"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold text-lg">
+                  <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-black font-bold text-lg">
                     {person.name.charAt(0).toUpperCase()}
                   </div>
                   <div>

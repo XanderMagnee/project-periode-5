@@ -62,7 +62,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* Map embed */}
+      {/* Map */}
       <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
         <div className="p-4 border-b border-gray-100">
           <h2 className="font-semibold text-gray-700">Locatie</h2>

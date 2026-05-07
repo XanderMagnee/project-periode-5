@@ -37,7 +37,7 @@ export default async function PersonDetailPage({
       {/* Header */}
       <div className="flex items-start justify-between mb-6">
         <div className="flex items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold text-3xl">
+          <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center text-black font-bold text-3xl">
             {person.name.charAt(0).toUpperCase()}
           </div>
           <div>
@@ -77,14 +77,14 @@ export default async function PersonDetailPage({
         <div
           className={`${
             totalIncome - totalExpense >= 0
-              ? 'bg-blue-50 border-blue-200'
+              ? 'bg-gray-50 border-gray-200'
               : 'bg-orange-50 border-orange-200'
           } border rounded-xl p-4`}
         >
           <p className="text-xs text-gray-600 font-medium uppercase mb-1">Saldo</p>
           <p
             className={`text-2xl font-bold ${
-              totalIncome - totalExpense >= 0 ? 'text-blue-700' : 'text-orange-600'
+              totalIncome - totalExpense >= 0 ? 'text-gray-800' : 'text-orange-600'
             }`}
           >
             €{(totalIncome - totalExpense).toFixed(2)}
@@ -132,7 +132,7 @@ export default async function PersonDetailPage({
           <div className="flex flex-col gap-2">
             <Link
               href={`/persons/${id}/transactions/new`}
-              className="bg-blue-700 text-white text-sm text-center py-2 rounded-lg hover:bg-blue-800 transition-colors"
+              className="bg-black text-white text-sm text-center py-2 rounded-lg hover:bg-gray-800 transition-colors"
             >
               + Transactie toevoegen
             </Link>
@@ -158,7 +158,7 @@ export default async function PersonDetailPage({
           <h2 className="font-semibold text-gray-700">Recente transacties</h2>
           <Link
             href={`/persons/${id}/transactions`}
-            className="text-blue-600 text-sm hover:underline"
+            className="text-black text-sm hover:underline"
           >
             Alle transacties →
           </Link>

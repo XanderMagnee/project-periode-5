@@ -25,7 +25,7 @@ export default function RootLayout({
         <main className="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
           {children}
         </main>
-        <footer className="bg-blue-700 text-white text-center py-4 text-sm mt-auto">
+        <footer className="bg-black text-white text-center py-4 text-sm mt-auto">
           <p>© 2025 Budget Buddy — Stichting KlikJongeren</p>
         </footer>
       </body>

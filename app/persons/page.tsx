@@ -15,7 +15,7 @@ export default async function PersonsPage() {
         <h1 className="text-3xl font-bold text-gray-800">Personen</h1>
         <Link
           href="/persons/new"
-          className="bg-blue-700 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-800 transition-colors"
+          className="bg-black text-white px-5 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors"
         >
           + Nieuw Persoon
         </Link>
@@ -28,7 +28,7 @@ export default async function PersonsPage() {
           <p className="text-sm mt-1 mb-4">Voeg een persoon toe om te beginnen</p>
           <Link
             href="/persons/new"
-            className="bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-800"
+            className="bg-black text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-gray-800"
           >
             Persoon aanmaken
           </Link>
@@ -41,7 +41,7 @@ export default async function PersonsPage() {
               className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all"
             >
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-11 h-11 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold text-xl">
+                <div className="w-11 h-11 rounded-full bg-gray-200 flex items-center justify-center text-black font-bold text-xl">
                   {person.name.charAt(0).toUpperCase()}
                 </div>
                 <div>
@@ -61,7 +61,7 @@ export default async function PersonsPage() {
               <div className="flex gap-2">
                 <Link
                   href={`/persons/${person.id}`}
-                  className="flex-1 text-center bg-blue-700 text-white text-sm py-2 rounded-lg hover:bg-blue-800 transition-colors"
+                  className="flex-1 text-center bg-black text-white text-sm py-2 rounded-lg hover:bg-gray-800 transition-colors"
                 >
                   Details
                 </Link>

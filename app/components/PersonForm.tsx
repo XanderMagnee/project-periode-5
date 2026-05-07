@@ -83,7 +83,7 @@ export default function PersonForm({ initialData }: PersonFormProps) {
           type="text"
           required
           defaultValue={initialData?.name}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
           placeholder="Jan Jansen"
         />
       </div>
@@ -97,7 +97,7 @@ export default function PersonForm({ initialData }: PersonFormProps) {
           type="email"
           required
           defaultValue={initialData?.email}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
           placeholder="jan@voorbeeld.nl"
         />
       </div>
@@ -110,7 +110,7 @@ export default function PersonForm({ initialData }: PersonFormProps) {
           name="birthDate"
           type="date"
           defaultValue={birthDateValue}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
         />
       </div>
 
@@ -122,7 +122,7 @@ export default function PersonForm({ initialData }: PersonFormProps) {
           name="address"
           type="text"
           defaultValue={initialData?.address ?? ''}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
           placeholder="Straat 1, 1234AB Stad"
         />
       </div>
@@ -135,7 +135,7 @@ export default function PersonForm({ initialData }: PersonFormProps) {
           name="phone"
           type="tel"
           defaultValue={initialData?.phone ?? ''}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
           placeholder="06-12345678"
         />
       </div>
@@ -144,7 +144,7 @@ export default function PersonForm({ initialData }: PersonFormProps) {
         <button
           type="submit"
           disabled={loading}
-          className="flex-1 bg-blue-700 text-white py-2 rounded-lg font-medium hover:bg-blue-800 disabled:opacity-50 transition-colors"
+          className="flex-1 bg-black text-white py-2 rounded-lg font-medium hover:bg-gray-800 disabled:opacity-50 transition-colors"
         >
           {loading ? 'Opslaan...' : initialData ? 'Wijzigingen opslaan' : 'Persoon aanmaken'}
         </button>
